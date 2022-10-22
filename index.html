@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.98.0">
+  <title>Мебельный магазин</title>
+  <!-- здесь подключаем бутстрап. карусель и хедер -->
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/headers/">
+  <!-- Ссылка на файл, если хочешь свои стили прописать -->
+  <link href="css/carousel.css" rel="stylesheet">
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- стайлы шли вместе с бутстрапом. так то если их удалить, ничего не изменится, но пусть будут-->
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      height: 3rem;
+      background-color: rgba(0, 0, 0, .1);
+      border: solid rgba(0, 0, 0, .15);
+      border-width: 1px 0;
+      box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- начало хедера -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/Logo.svg" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form.php">Задать вопрос</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Искать на сайте" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Поиск</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- хедер кончился -->
+  <!-- начало основного блока -->
+  <main>
+    <!-- карусель -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <!-- индикаторы снизу -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/carousel/1.jpg" width="100%" alt="">
+          <!--  -->
+          <!-- сама карусель -->
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Кухонные гарнитуры</h1>
+              <p>Просмотрите готовые решения или создайте свой собственный дизайн</p>
+              <p><a class="btn btn-lg btn-secondary" href="catalog.html">Перейти в каталог</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/carousel/2.jpg" width="100%" alt="">
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Шкафы в спальню</h1>
+              <p>Просмотрите готовые решения или создайте свой собственный дизайн</p>
+              <p><a class="btn btn-lg btn-secondary" href="catalog.html">Перейти в каталог</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/carousel/3.jpg" width="100%" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Стенки в гостиную</h1>
+              <p>Просмотрите готовые решения или создайте свой собственный дизайн</p>
+              <p><a class="btn btn-lg btn-secondary" href="catalog.html">Перейти в каталог</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <!-- боковые кнопки карусели -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!--  -->
+    <!-- карусель закончилась -->
+    <!-- контент -->
+    <div class="container marketing">
+      <!-- отзывы -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="img/review/review1.jpg" width="100%" class="otziv" alt="">
+          <h2 class="fw-normal">Серёга</h2>
+          Заказывал в данном магазине шкаф-купе, собрали и привезли всё вовремя. <br> Цены на кусаются, можно брать.
+          <br>
+          <br>
+          <p><a class="btn btn-secondary" href="#">Развернуть отзыв</a></p>
+        </div>
+        <div class="col-lg-4">
+          <img src="img/review/review2.jpg" width="100%" class="otziv" alt="">
+          <h2 class="fw-normal">Андрей</h2>
+          Покупал в данном магазине кухонный гарнитур, детально обговорили все условия. Привезли в течение двух недель,
+          вся семья осталась довольна.
+          <br>
+          <br>
+          <p><a class="btn btn-secondary" href="#">Развернуть отзыв</a></p>
+        </div>
+        <div class="col-lg-4">
+          <img src="img/review/review3.jpg" width="100%" height="100%" class="otziv" alt="">
+          <h2 class="fw-normal">Алина</h2>
+          Три года назад покупала здесь стенку в спальню, спустя три года выглядит как новая! <br> Лучший магазин!
+          <br>
+          <br>
+          <p><a class="btn btn-secondary" href="#">Развернуть отзыв</a></p>
+        </div>
+      </div>
+      <!-- отзывы кончились -->
+      <hr class="featurette-divider">
+      <!-- описание -->
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Шкафы в спальню. <span class="text-muted">Широкий модельный
+              ряд.</span></h2>
+          <div class="lead">
+            <p>Фото шкафов в спальню часто выглядят очень впечатляюще. Разглядывая их, мы представляем, как это будет
+              выглядеть в реальности - стильно, уютно, удобно.
+              При этом многие полагают, что подобные интерьеры – это что-то эксклюзивное, почти недоступное. Но все
+              проще – нужно лишь заказать правильную стенку, чтобы спальня стала максимально функциональной, стильной.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <img src="img/main/2.jpg" width="100%" alt="">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Кухонные гарнитуры. <span class="text-muted">Найдется для
+              каждого.</span></h2>
+          <div class="lead">
+            <p>Кухонный гарнитур можно заказать по особому проекту, если из имеющихся моделей вам ничего не удалось
+              подобрать. Мы предлагаем мебель на заказ в классическом, кантри, hi-tech и других стилях.</p>
+          </div>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="img/main/kitchen2.jpg" width="100%" alt="">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Стенки для гостиной. <span class="text-muted">На любой
+              вкус.</span>
+          </h2>
+          <div class="lead">
+            <p>Стенки для гостиных — заказ мебели по индивидуальному дизайну с вашими размерами. Отдельные элементы и
+              комплексные решения по проектированию помещений.</p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <img src="img/main/living1.jpg" width="100%" alt="">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+    </div>
+    <!--  -->
+    <!-- контент закончился -->
+    <!-- футер -->
+    <footer>
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Вверх</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Контакты</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Заказать звонок</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Сертификат</a></li>
+
+      </ul>
+      <p class="text-center text-muted">&copy; 2022 Furniture Shop, г. Ульяновск <br> ул. Самарская 10</p>
+    </footer>
+    <!-- футер закончился -->
+    <!-- скрипт бутстрапа -->
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+<!-- для выравнивания Shift + Alt + f -->

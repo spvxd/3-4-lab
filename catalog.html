@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.98.0">
+    <title>Каталог</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/catalog.css">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/Logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="catalog.html">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.php">Задать вопрос</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Искать на сайте"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- вот до этого момента все то же самое, что и в индексе -->
+    <main>
+        <!-- инфа про каталог с двумя кнопками, по кнопке "просмотр" - скролл на каталог -->
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Каталог мебели</h1>
+                    <p class="lead text-muted">На данной странице вы можете просмотреть всю необходимую информацию об
+                        интересующем вас
+                        товаре, а также добавить его в корзину.</p>
+                    <p>
+                        <a href="catalog.html#section1" class="btn btn-primary my-2">Просмотр товара</a>
+                        <a href="#" class="btn btn-secondary my-2">Моя корзина</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--  -->
+        <!-- делим на сетку 3х3 -->
+        <div class="album py-5 bg-light" id="section1">
+            <div class="container">
+                <!-- в каждом окне фото + две кнопки -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/catalog/kitchen1.jpeg" width="100%" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Классный текст про классную мебель.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Просмотр</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">В
+                                            корзину</button>
+                                    </div>
+                                    <small class="text-muted">Под заказ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/catalog/kitchen2.jpeg" width="100%" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Классный текст про классную мебель.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Просмотр</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">В
+                                            корзину</button>
+                                    </div>
+                                    <small class="text-muted">Под заказ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/catalog/kitchen3.jpeg" width="100%" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Классный текст про классную мебель.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Просмотр</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">В
+                                            корзину</button>
+                                    </div>
+                                    <small class="text-muted">Под заказ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/catalog/living5.jpg" width="100%" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Классный текст про классную мебель.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Просмотр</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">В
+                                            корзину</button>
+                                    </div>
+                                    <small class="text-muted">Под заказ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/catalog/living4.jpeg" width="100%" height="280px" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Классный текст про классную мебель.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Просмотр</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">В
+                                            корзину</button>
+                                    </div>
+                                    <small class="text-muted">Под заказ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/catalog/living6.jpg" width="100%" alt="">
+
+                            <div class="card-body">
+                                <p class="card-text">Классный текст про классную мебель.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Просмотр</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">В
+                                            корзину</button>
+                                    </div>
+                                    <small class="text-muted">Под заказ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/catalog/bedroom1.jpg" width="100%" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Классный текст про классную мебель.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Просмотр</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">В
+                                            корзину</button>
+                                    </div>
+                                    <small class="text-muted">Под заказ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/catalog/bedroom2.jpg" width="100%" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Классный текст про классную мебель.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Просмотр</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">В
+                                            корзину</button>
+                                    </div>
+                                    <small class="text-muted">Под заказ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/catalog/bedroom3.jpg" width="100%" height="280px" alt="">
+                            <div class="card-body">
+                                <p class="card-text">Классный текст про классную мебель.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Просмотр</button>
+
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">В
+                                            корзину</button>
+                                    </div>
+                                    <small class="text-muted">Под заказ</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- и так для всех -->
+    </main>
+    <!-- футер, как в индексе -->
+    <footer>
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Вверх</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Контакты</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Заказать звонок</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Сертификат</a></li>
+
+        </ul>
+        <p class="text-center text-muted">&copy; 2022 Furniture Shop, г. Ульяновск <br> ул. Самарская 10</p>
+    </footer>
+    <!-- не работает -->
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/script.js"></script>
+
+
+</body>
+
+</html>
